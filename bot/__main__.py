@@ -44,18 +44,18 @@ def stats(update, context):
 
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/SlamDevs/slam-mirrorbot")
-    buttons.buildbutton("Channel", "https://t.me/SlamMirrorUpdates")
+    buttons.buildbutton("Subscribe", "https://www.youtube.com/channel/UCJVrPRNqzGPQfG57H-vgz0w")
+    buttons.buildbutton("Owner", "https://t.me/Aashath")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can mirror all your links to Google Drive!
+This C2P tech bot can mirror all your links to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
         sendMarkup(
-            'Oops! not a Authorized user.\nPlease deploy your own <b>slam-mirrorbot</b>.',
+            'Fuck! Your are not a Authorized user.\nGet loss!!!!.\n Or i will inform to my owner<b>Aashath</b>.',
             context.bot,
             update,
             reply_markup,
@@ -63,7 +63,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
 
 
 def restart(update, context):
-    restart_message = sendMessage("Restarting, Please wait!", context.bot, update)
+    restart_message = sendMessage("Sir!! Restarting, Please wait!", context.bot, update)
     # Save restart message object in order to reply to it after restarting
     with open(".restartmsg", "w") as f:
         f.truncate(0)
