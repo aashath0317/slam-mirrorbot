@@ -23,7 +23,6 @@ pyshorteners
 python-dotenv
 python-magic
 python-telegram-bot
-qbittorrent-api
 requests
 speedtest-cli
 telegraph
