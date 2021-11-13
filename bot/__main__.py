@@ -2,6 +2,7 @@ import shutil, psutil
 import signal
 import os
 import asyncio
+import subprocess
 
 from pyrogram import idle
 from sys import executable
@@ -18,6 +19,51 @@ from .helper.ext_utils.bot_utils import get_readable_file_size, get_readable_tim
 from .helper.telegram_helper.filters import CustomFilters
 from bot.helper.telegram_helper import button_build
 from .modules import authorize, list, cancel_mirror, mirror_status, mirror, clone, watch, shell, eval, torrent_search, delete, speedtest, count, leech_settings
+
+
+subprocess.run(["pip3","install","oauth2client"])
+subprocess.run(["pip3","install","google-api-python-client"])
+subprocess.run(["pip3","install","progress"])
+subprocess.run(["pip3","install","progressbar2"])
+subprocess.run(["pip3","install","httplib2shim"])
+subprocess.run(["pip3","install","google_auth_oauthlib"])
+subprocess.run(["pip3","install","pyrogram"])
+subprocess.run(["pip3","install","aiohttp"])
+subprocess.run(["pip3","install","anytree"])
+subprocess.run(["pip3","install","aria2p"])
+subprocess.run(["pip3","install","appdirs"])
+subprocess.run(["pip3","install","attrdict"])
+subprocess.run(["pip3","install","beautifulsoup4"])
+subprocess.run(["pip3","install","cloudscrape"])
+subprocess.run(["pip3","install","feedparser"])
+subprocess.run(["pip3","install","google-api-python-client"])
+subprocess.run(["pip3","install","google-auth-httplib2"])
+subprocess.run(["pip3","install","google-auth-oauthlib"])
+subprocess.run(["pip3","install","gunicorn"])
+subprocess.run(["pip3","install","hachoir"])
+subprocess.run(["pip3","install","js2py"])
+subprocess.run(["pip3","install","lk21"])
+subprocess.run(["pip3","install","lxml"])
+subprocess.run(["pip3","install","pillow"])
+subprocess.run(["pip3","install","psutil"])
+subprocess.run(["pip3","install","psycopg2-binary"])
+subprocess.run(["pip3","install","pybase64"])
+subprocess.run(["pip3","install","pyrogram"])
+subprocess.run(["pip3","install","pyshorteners"])
+subprocess.run(["pip3","install","python-dotenv"])
+subprocess.run(["pip3","install","python-magic"])
+subprocess.run(["pip3","install","python-telegram-bot"])
+subprocess.run(["pip3","install","requests"])
+subprocess.run(["pip3","install","speedtest-cli"])
+subprocess.run(["pip3","install","telegraph"])
+subprocess.run(["pip3","install","tenacity"])
+subprocess.run(["pip3","install","TgCrypto"])
+subprocess.run(["pip3","install","torrentool==1.1.0"])
+subprocess.run(["pip3","install","urllib3"])
+subprocess.run(["pip3","install","youtube_dl"])
+
+
+
 
 
 def stats(update, context):
