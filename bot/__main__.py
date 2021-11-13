@@ -1,26 +1,4 @@
-import shutil, psutil
-import signal
-import os
-import asyncio
 import subprocess
-
-from pyrogram import idle
-from sys import executable
-
-from telegram import ParseMode
-from telegram.ext import CommandHandler
-from telegraph import Telegraph
-from wserver import start_server_async
-from bot import bot, app, dispatcher, updater, botStartTime, IGNORE_PENDING_REQUESTS, IS_VPS, PORT, alive, web, OWNER_ID, AUTHORIZED_CHATS, telegraph_token
-from bot.helper.ext_utils import fs_utils
-from bot.helper.telegram_helper.bot_commands import BotCommands
-from bot.helper.telegram_helper.message_utils import *
-from .helper.ext_utils.bot_utils import get_readable_file_size, get_readable_time
-from .helper.telegram_helper.filters import CustomFilters
-from bot.helper.telegram_helper import button_build
-from .modules import authorize, list, cancel_mirror, mirror_status, mirror, clone, watch, shell, eval, torrent_search, delete, speedtest, count, leech_settings
-
-
 subprocess.run(["pip3","install","oauth2client"])
 subprocess.run(["pip3","install","google-api-python-client"])
 subprocess.run(["pip3","install","progress"])
@@ -62,9 +40,25 @@ subprocess.run(["pip3","install","torrentool==1.1.0"])
 subprocess.run(["pip3","install","urllib3"])
 subprocess.run(["pip3","install","youtube_dl"])
 
+import shutil, psutil
+import signal
+import os
+import asyncio
+from pyrogram import idle
+from sys import executable
 
-
-
+from telegram import ParseMode
+from telegram.ext import CommandHandler
+from telegraph import Telegraph
+from wserver import start_server_async
+from bot import bot, app, dispatcher, updater, botStartTime, IGNORE_PENDING_REQUESTS, IS_VPS, PORT, alive, web, OWNER_ID, AUTHORIZED_CHATS, telegraph_token
+from bot.helper.ext_utils import fs_utils
+from bot.helper.telegram_helper.bot_commands import BotCommands
+from bot.helper.telegram_helper.message_utils import *
+from .helper.ext_utils.bot_utils import get_readable_file_size, get_readable_time
+from .helper.telegram_helper.filters import CustomFilters
+from bot.helper.telegram_helper import button_build
+from .modules import authorize, list, cancel_mirror, mirror_status, mirror, clone, watch, shell, eval, torrent_search, delete, speedtest, count, leech_settings
 
 def stats(update, context):
     currentTime = get_readable_time(time.time() - botStartTime)
